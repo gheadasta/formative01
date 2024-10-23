@@ -1,0 +1,32 @@
+Creating plot from Orange R dataset 
+
+Step 1 :
+```{r}
+# Download the library 
+library(ggplot2)
+library(dplyr)
+```
+Step 2 : 
+```{r}
+# Download data from R database
+data ("Orange")
+head (Orange)
+
+```
+Step 3 : 
+```{r}
+# Set a line plot, add the pointers, add title and name the variables in the plot
+orangeplot <- Orange %>%
+  ggplot(aes(x = age, y = circumference, color = Tree)) +
+  geom_line() + geom_point(size = 2) +
+  labs(
+    title = "Growth of Orange Trees Throughout the Time",
+    x = "age", y = "circumference")
+theme_minimal()
+```
+Step 4 :
+```{r}
+print(orangeplot)
+```
+
+- The end -
