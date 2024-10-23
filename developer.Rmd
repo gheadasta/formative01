@@ -18,7 +18,7 @@ Step 3 :
 # Set a line plot, add the pointers, add title and name the variables in the plot
 orangeplot <- Orange %>%
   ggplot(aes(x = age, y = circumference, color = Tree)) +
-  geom_line() + geom_point(size = 2) +
+  geom_line() + geom_point(size = 1) +
   labs(
     title = "Growth of Orange Trees Throughout the Time",
     x = "age", y = "circumference")
