@@ -16,7 +16,7 @@ head (Orange)
 Step 3 : 
 ```{r}
 # Set a line plot, add the pointers, add title and name the variables in the plot
-orangeplot <- Orange %>%
+data_new <- Orange %>%
   ggplot(aes(x = age, y = circumference, color = Tree)) +
   geom_line() + geom_point(size = 1) +
   labs(
@@ -26,7 +26,7 @@ theme_minimal()
 ```
 Step 4 :
 ```{r}
-print(orangeplot)
+print(data_new)
 ```
 
 - The end -
